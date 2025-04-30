@@ -1,5 +1,5 @@
 resource "aws_db_subnet_group" "group3_subnet_group" {
-  name       = "group3-db-subnet-group"
+  name       = "group3-db-subnet-group-new"
   subnet_ids = var.subnet_ids
 }
 
