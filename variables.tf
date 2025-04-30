@@ -8,3 +8,5 @@ variable "bastion_cidr"     { default = "0.0.0.0/0" }
 variable "db_name"          { default = "wordpress" }
 variable "db_user"          { default = "Kaizen" }
 variable "db_password"      {}
+variable "db_instance_class"{ type    = string }
+variable "engine_version"   { type    = string }
