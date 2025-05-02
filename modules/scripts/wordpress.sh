@@ -12,3 +12,8 @@
 	sudo chmod -R 755 /var/www/html
 	sudo rm -r /var/www/html/index.html
 	sudo systemctl restart httpd
+
+
+
+
+
