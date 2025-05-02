@@ -36,8 +36,17 @@ resource "aws_security_group" "group3_sg" {
   }
 }
 
+data "aws_ami" "linux" {
+  most_recent = true
+  owners      = ["amazon"]
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
+  }
+}
+
 resource "aws_instance" "group3" {
-  ami                         = var.ami_id
+  ami                         = data.aws_ami.linux.id
   instance_type               = var.instance_type
   subnet_id                   = var.subnet_id
   vpc_security_group_ids      = [aws_security_group.group3_sg.id]

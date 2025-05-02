@@ -8,7 +8,6 @@ module "compute" {
   source           = "./modules/compute"
   vpc_id           = module.network.vpc_id
   subnet_id        = module.network.subnet_ids[0]
-  ami_id           = var.ami_id
   instance_type    = var.instance_type
   bastion_cidr     = var.bastion_cidr
   public_key_path  = var.public_key_path

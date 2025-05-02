@@ -30,7 +30,7 @@ resource "aws_route_table" "public_rt" {
   tags = { Name = "group-3-rt" }
 }
 
-resource "aws_route_table_association" "assoc" {
+resource "aws_route_table_association" "a" {
   count          = 3
   subnet_id      = aws_subnet.public[count.index].id
   route_table_id = aws_route_table.public_rt.id
